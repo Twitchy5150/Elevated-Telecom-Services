@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employment Application - Elevated Telecom Services</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        nav { background: #444; padding: 10px; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        
+        .container { 
+            max-width: 800px; 
+            margin: 30px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 0; }
+        
+        /* Form Iframe Styling */
+        .form-frame {
+            width: 100%;
+            height: 900px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employment Application</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Join Our Team</h2>
+        <p>Please fill out the application form below and attach your resume. We review all submissions promptly.</p>
+
+        <!-- Embedded Google Form with viewform?embedded=true -->
+        <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdUqhivS14vj5sVNHymMNoWznkhVDCa5Dr2WazTc4dexon6Vw/viewform?embedded=true">Loading…</iframe>
+    </div>
+</body>
+</html>

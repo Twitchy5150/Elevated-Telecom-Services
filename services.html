@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services - My Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        nav { background: #444; padding: 10px; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        
+        .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Alternating Staggered Rows */
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* This flips every other row so the photo alternates sides */
+        .service-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-row img {
+            width: 45%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .service-text {
+            width: 55%;
+        }
+
+        .service-text h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        /* Responsive for mobile screens */
+        @media (max-width: 768px) {
+            .service-row, .service-row.reverse {
+                flex-direction: column;
+            }
+            .service-row img, .service-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>What We Offer</h2>
+        <p style="margin-bottom: 40px;">At Elevated Telecom Services, we specialize in assembly, reactivation, troubleshooting, and proactive maintenance to keep towers functioning properly. We pride ourselves on making sure that every job is handled with utmost care and precision.</p>
+
+        <!-- Row 1: Photo Left, Text Right -->
+        <div class="service-row">
+            <img src="images/serv1.jpg" alt="Serv 1">
+            <div class="service-text">
+                <h3>Tower Assembly & Setup</h3>
+                <p>Describe your tower assembly services here. Explain the care and technical precision involved in setting up structural components safely.</p>
+            </div>
+        </div>
+
+        <!-- Row 2: Photo Right, Text Left (Staggered) -->
+        <div class="service-row reverse">
+            <img src="images/serv2.jpg" alt="Serv 2">
+            <div class="service-text">
+                <h3>Reactivation & Testing</h3>
+                <p>Explain your reactivation process here. Highlight how you ensure all systems are fully operational and rigorously tested before sign-off.</p>
+            </div>
+        </div>
+
+        <!-- Row 3: Photo Left, Text Right -->
+        <div class="service-row">
+            <img src="images/serv3.jpg" alt="Serv 3">
+            <div class="service-text">
+                <h3>Troubleshooting & Diagnostics</h3>
+                <p>Detail how you handle complex diagnostic challenges, finding and fixing faults quickly to minimize downtime for clients.</p>
+            </div>
+        </div>
+
+        <!-- Row 4: Photo Right, Text Left (Staggered) -->
+        <div class="service-row reverse">
+            <img src="images/serv4.jpg" alt="Serv 4">
+            <div class="service-text">
+                <h3>Proactive Maintenance</h3>
+                <p>Discuss your routine inspection and maintenance plans designed to keep equipment functioning smoothly year-round.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
