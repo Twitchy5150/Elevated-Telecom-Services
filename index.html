@@ -24,12 +24,40 @@
 
         .logo-wrap {
             text-align: center;
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
         .logo-wrap img {
-            max-width: 100%;
+            max-width: 280px;
+            width: 100%;
             height: auto;
             border-radius: 6px;
+        }
+
+        /* Homepage Featured Photo */
+        .hero-photo {
+            margin: 25px 0;
+            text-align: center;
+        }
+        .hero-photo img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        /* Embedded Map Section */
+        .map-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .map-section iframe {
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 10px;
+            display: block;
         }
 
         .cta-btn {
@@ -50,6 +78,8 @@
         @media (max-width: 600px) {
             .container { margin: 15px; padding: 20px; }
             nav a { display: inline-block; margin: 5px 10px; }
+            .hero-photo img { max-height: 280px; }
+            .map-section iframe { height: 280px; }
         }
 
         footer {
@@ -81,11 +111,25 @@
         <div class="logo-wrap">
             <img src="images/companylogo.jpg" alt="Elevated Telecom Services Logo">
         </div>
+
         <h2>Reliable Wireless &amp; Tower Solutions</h2>
         <p>Elevated Telecom Services provides dependable field operations, structural mount installations, rigging, and site maintenance for telecommunications networks.</p>
         <p>Whether supporting scheduled carrier maintenance windows, tower modifications, or rapid-response calls, our crews focus on safety, precision, and getting the job done right the first time.</p>
+
+        <!-- SWAP YOUR NEW HOMEPAGE PHOTO FILENAME HERE -->
+        <div class="hero-photo">
+            <img src="images/business1.jpg" alt="Business 1">
+        </div>
+
         <a href="services.html" class="cta-btn">Explore Our Services</a>
         <a href="contact.html" class="cta-btn">Get in Touch</a>
+
+        <!-- EMBEDDED LOCATION MAP -->
+        <div class="map-section">
+            <h2>Our Location</h2>
+            <p><strong>333 Wilhagan Rd, Nashville, TN 37217</strong></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.2583203584836!2d-86.71841239999999!3d36.1359231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886468cbc5f4507d%3A0x1a17b1f589f1c61a!2s333%20Wilhagan%20Rd%2C%20Nashville%2C%20TN%2037217!5e0!3m2!1sen!2sus!4v1794952414072!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
     </div>
 
     <footer>

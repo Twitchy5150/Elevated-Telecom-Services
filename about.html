@@ -24,9 +24,24 @@
         ul { padding-left: 20px; }
         li { margin-bottom: 8px; }
 
+        /* About Page Photo: Shows Full Image Without Cropping */
+        .about-photo {
+            margin: 25px 0;
+            text-align: center;
+        }
+        .about-photo img {
+            width: 100%;
+            max-width: 540px;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            display: inline-block;
+        }
+
         @media (max-width: 600px) {
             .container { margin: 15px; padding: 20px; }
             nav a { display: inline-block; margin: 5px 10px; }
+            .about-photo img { max-width: 100%; }
         }
 
         footer {
@@ -58,6 +73,10 @@
         <h2>Who We Are</h2>
         <p>Elevated Telecom Services is dedicated to supporting wireless infrastructure with disciplined rigging, careful ground staging, and thorough tower-top execution.</p>
         <p>We value clear communication, organized job sites, and strict adherence to safety standards across every deployment—from daytime ground prep and mount assembly to overnight maintenance windows.</p>
+
+        <div class="about-photo">
+            <img src="images/business2.jpg" alt="Elevated Telecom Services Tower Climber Tied Off Aloft">
+        </div>
 
         <h2>What Sets Our Crews Apart</h2>
         <ul>
