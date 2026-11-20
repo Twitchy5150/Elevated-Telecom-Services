@@ -2,61 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Services - My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Elevated Telecom Services</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; line-height: 1.6; }
         header { background: #333; color: #fff; padding: 20px; text-align: center; }
         nav { background: #444; padding: 10px; text-align: center; }
         nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
         nav a:hover { text-decoration: underline; }
         
-        .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { 
+            max-width: 800px; 
+            margin: 30px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 0; }
         
-        /* Alternating Staggered Rows */
-        .service-row {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
+        /* Service Cards Styling */
+        .service-item {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
             border-bottom: 1px solid #eee;
         }
-        
-        /* This flips every other row so the photo alternates sides */
-        .service-row.reverse {
-            flex-direction: row-reverse;
+        .service-item:last-of-type {
+            border-bottom: none;
+            margin-bottom: 10px;
+            padding-bottom: 0;
         }
-
-        .service-row img {
-            width: 45%;
-            height: auto;
+        .service-item img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
             border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+        }
+        .service-item h3 {
+            margin: 0 0 10px 0;
+            color: #222;
+            font-size: 1.3em;
+        }
+        .service-item p {
+            margin: 0;
+            color: #444;
         }
 
-        .service-text {
-            width: 55%;
+        /* Call to Action Box */
+        .cta-box {
+            background: #f9f9f9;
+            border-left: 4px solid #333;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .cta-btn:hover {
+            background-color: #555;
         }
 
-        .service-text h3 {
-            margin-top: 0;
-            color: #333;
+        /* Consistent Dark Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
         }
-
-        /* Responsive for mobile screens */
-        @media (max-width: 768px) {
-            .service-row, .service-row.reverse {
-                flex-direction: column;
-            }
-            .service-row img, .service-text {
-                width: 100%;
-            }
+        footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Our Services</h1>
+        <p>Elevated Telecom Services — Tower Construction, Rigging &amp; Maintenance</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -65,45 +98,49 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <h2>What We Offer</h2>
-        <p style="margin-bottom: 40px;">At Elevated Telecom Services, we specialize in assembly, reactivation, troubleshooting, and proactive maintenance to keep towers functioning properly. We pride ourselves on making sure that every job is handled with utmost care and precision.</p>
+        <h2>Telecommunications Infrastructure &amp; Field Operations</h2>
+        <p>At Elevated Telecom Services, we deliver turnkey wireless construction, structural upgrades, and ongoing tower maintenance with an uncompromising commitment to safety, quality, and schedule integrity.</p>
 
-        <!-- Row 1: Photo Left, Text Right -->
-        <div class="service-row">
-            <img src="images/serv1.jpg" alt="Serv 1">
-            <div class="service-text">
-                <h3>Tower Assembly & Setup</h3>
-                <p>Describe your tower assembly services here. Explain the care and technical precision involved in setting up structural components safely.</p>
-            </div>
+        <!-- Service 1: serv1.jpg -->
+        <div class="service-item">
+            <img src="images/serv1.jpg" alt="Overnight Telecom Tower Site Deployment and Rigging Staging">
+            <h3>24/7 Maintenance Window &amp; Rapid Field Deployment</h3>
+            <p>Our fully equipped field crews are ready to mobilize day or night to meet strict carrier maintenance windows and emergency call-outs[cite: 1]. Pictured here during an overnight site deployment, our team stages specialized rigging gear, safety equipment, and testing hardware to execute seamless upgrades and troubleshooting without disrupting daytime network traffic[cite: 1].</p>
         </div>
 
-        <!-- Row 2: Photo Right, Text Left (Staggered) -->
-        <div class="service-row reverse">
-            <img src="images/serv2.jpg" alt="Serv 2">
-            <div class="service-text">
-                <h3>Reactivation & Testing</h3>
-                <p>Explain your reactivation process here. Highlight how you ensure all systems are fully operational and rigorously tested before sign-off.</p>
-            </div>
+        <!-- Service 2: serv2.jpg -->
+        <div class="service-item">
+            <img src="images/serv2.jpg" alt="Monopole Cell Tower Heavy Rigging and Steel Mounting Hoist">
+            <h3>Tower Rigging, Hoisting &amp; Carrier Upgrades</h3>
+            <p>Elevated Telecom Services specializes in precision rigging and heavy-load hoisting for monopole, self-support, and guyed tower sites[cite: 2]. Shown here executing a sector frame and antenna hardware hoist, our certified tower crews utilize engineered load lines, controlled tag lines, and strict ANSI/TIA rigging standards to safely lift and install carrier infrastructure without disrupting existing site equipment[cite: 2].</p>
         </div>
 
-        <!-- Row 3: Photo Left, Text Right -->
-        <div class="service-row">
-            <img src="images/serv3.jpg" alt="Serv 3">
-            <div class="service-text">
-                <h3>Troubleshooting & Diagnostics</h3>
-                <p>Detail how you handle complex diagnostic challenges, finding and fixing faults quickly to minimize downtime for clients.</p>
-            </div>
+        <!-- Service 3: serv3.jpg -->
+        <div class="service-item">
+            <img src="images/serv3.jpg" alt="Telecom Tower Sector Frame Assembly and Hybrid Cable Staging">
+            <h3>Structural Mount Assembly, Modifications &amp; Line Staging</h3>
+            <p>Proper ground preparation and precision steel assembly are essential to keeping tower projects on schedule and under budget[cite: 3]. Shown here during pre-hoist staging, our crews inspect, organize, and pre-assemble galvanized sector frames, collar mounts, antenna pipes, and hybrid fiber/power trunk lines on the ground—ensuring fast, accurate installation and clean cable routing once aloft[cite: 3].</p>
         </div>
 
-        <!-- Row 4: Photo Right, Text Left (Staggered) -->
-        <div class="service-row reverse">
-            <img src="images/serv4.jpg" alt="Serv 4">
-            <div class="service-text">
-                <h3>Proactive Maintenance</h3>
-                <p>Discuss your routine inspection and maintenance plans designed to keep equipment functioning smoothly year-round.</p>
-            </div>
+        <!-- Service 4: serv4.jpg -->
+        <div class="service-item">
+            <img src="images/serv4.jpg" alt="Certified Tower Technicians Working Aloft on Monopole Cellular Antennas">
+            <h3>Tower-Top Antenna, Radio &amp; Line Installation</h3>
+            <p>Our NWSA-certified tower technicians execute complex tower-top installations, sector upgrades, and line replacements with uncompromising precision and safety[cite: 4]. Pictured here working aloft on a multi-carrier monopole array, our crews handle panel antennas, Remote Radio Units (RRUs), and weatherproofed jumper routing while maintaining 100% tie-off compliance under strict OSHA and ANSI standards[cite: 4].</p>
         </div>
 
+        <!-- Call to Action -->
+        <div class="cta-box">
+            <h3>Need a Reliable Crew for Your Next Tower Project?</h3>
+            <p>Contact our team to discuss upcoming builds, structural modifications, or maintenance schedules.</p>
+            <a href="contact.html" class="cta-btn">Contact Us Today</a>
+        </div>
     </div>
+
+    <footer>
+        <p><strong>Procedures &amp; Safety Policies</strong></p>
+        <p>All field operations strictly adhere to OSHA, ANSI/TIA-322, and NATE safety standards with 100% fall-protection compliance.</p>
+        <p>&copy; 2026 Elevated Telecom Services. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
