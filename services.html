@@ -7,12 +7,13 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; line-height: 1.6; }
         header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        header p { margin: 5px 0 0 0; }
         nav { background: #444; padding: 10px; text-align: center; }
         nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
         nav a:hover { text-decoration: underline; }
         
         .container { 
-            max-width: 800px; 
+            max-width: 960px; 
             margin: 30px auto; 
             background: #fff; 
             padding: 30px; 
@@ -21,10 +22,13 @@
         }
         h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 0; }
         
-        /* Service Cards Styling */
+        /* Staggered Alternating Service Rows */
         .service-item {
+            display: flex;
+            align-items: center;
+            gap: 25px;
             margin-bottom: 35px;
-            padding-bottom: 25px;
+            padding-bottom: 30px;
             border-bottom: 1px solid #eee;
         }
         .service-item:last-of-type {
@@ -32,22 +36,47 @@
             margin-bottom: 10px;
             padding-bottom: 0;
         }
-        .service-item img {
+        /* Even items flip image to the right and text to the left */
+        .service-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .service-media {
+            flex: 1;
+            min-width: 0;
+        }
+        .service-media img {
             width: 100%;
-            max-height: 450px;
+            height: 260px;
             object-fit: cover;
             border-radius: 6px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-            margin-bottom: 15px;
+            display: block;
         }
-        .service-item h3 {
+        .service-content {
+            flex: 1.2;
+            min-width: 0;
+        }
+        .service-content h3 {
             margin: 0 0 10px 0;
             color: #222;
-            font-size: 1.3em;
+            font-size: 1.25em;
         }
-        .service-item p {
+        .service-content p {
             margin: 0;
             color: #444;
+        }
+
+        /* Stack cleanly on smaller screens */
+        @media (max-width: 720px) {
+            .service-item,
+            .service-item:nth-child(even) {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+            }
+            .service-media img {
+                height: 220px;
+            }
         }
 
         /* Call to Action Box */
@@ -57,6 +86,9 @@
             padding: 20px;
             margin-top: 30px;
             border-radius: 4px;
+        }
+        .cta-box h3 {
+            margin-top: 0;
         }
         .cta-btn {
             display: inline-block;
@@ -101,32 +133,48 @@
         <h2>Telecommunications Infrastructure &amp; Field Operations</h2>
         <p>At Elevated Telecom Services, we deliver turnkey wireless construction, structural upgrades, and ongoing tower maintenance with an uncompromising commitment to safety, quality, and schedule integrity.</p>
 
-        <!-- Service 1: serv1.jpg -->
+        <!-- Service 1: Photo Left / Text Right -->
         <div class="service-item">
-            <img src="images/serv1.jpg" alt="Overnight Telecom Tower Site Deployment and Rigging Staging">
-            <h3>24/7 Maintenance Window &amp; Rapid Field Deployment</h3>
-            <p>Our fully equipped field crews are ready to mobilize day or night to meet strict carrier maintenance windows and emergency call-outs[cite: 1]. Pictured here during an overnight site deployment, our team stages specialized rigging gear, safety equipment, and testing hardware to execute seamless upgrades and troubleshooting without disrupting daytime network traffic[cite: 1].</p>
+            <div class="service-media">
+                <img src="images/serv1.jpg" alt="Overnight Telecom Tower Site Deployment and Rigging Staging">
+            </div>
+            <div class="service-content">
+                <h3>24/7 Maintenance Window &amp; Rapid Field Deployment</h3>
+                <p>Our fully equipped field crews are ready to mobilize day or night to meet strict carrier maintenance windows and emergency call-outs. Pictured here during an overnight site deployment, our team stages specialized rigging gear, safety equipment, and testing hardware to execute seamless upgrades and troubleshooting without disrupting daytime network traffic.</p>
+            </div>
         </div>
 
-        <!-- Service 2: serv2.jpg -->
+        <!-- Service 2: Text Left / Photo Right (via :nth-child(even) flex-direction: row-reverse) -->
         <div class="service-item">
-            <img src="images/serv2.jpg" alt="Monopole Cell Tower Heavy Rigging and Steel Mounting Hoist">
-            <h3>Tower Rigging, Hoisting &amp; Carrier Upgrades</h3>
-            <p>Elevated Telecom Services specializes in precision rigging and heavy-load hoisting for monopole, self-support, and guyed tower sites[cite: 2]. Shown here executing a sector frame and antenna hardware hoist, our certified tower crews utilize engineered load lines, controlled tag lines, and strict ANSI/TIA rigging standards to safely lift and install carrier infrastructure without disrupting existing site equipment[cite: 2].</p>
+            <div class="service-media">
+                <img src="images/serv2.jpg" alt="Monopole Cell Tower Heavy Rigging and Steel Mounting Hoist">
+            </div>
+            <div class="service-content">
+                <h3>Tower Rigging, Hoisting &amp; Carrier Upgrades</h3>
+                <p>Elevated Telecom Services specializes in precision rigging and heavy-load hoisting for monopole, self-support, and guyed tower sites. Shown here executing a sector frame and antenna hardware hoist, our certified tower crews utilize engineered load lines, controlled tag lines, and strict ANSI/TIA rigging standards to safely lift and install carrier infrastructure without disrupting existing site equipment.</p>
+            </div>
         </div>
 
-        <!-- Service 3: serv3.jpg -->
+        <!-- Service 3: Photo Left / Text Right -->
         <div class="service-item">
-            <img src="images/serv3.jpg" alt="Telecom Tower Sector Frame Assembly and Hybrid Cable Staging">
-            <h3>Structural Mount Assembly, Modifications &amp; Line Staging</h3>
-            <p>Proper ground preparation and precision steel assembly are essential to keeping tower projects on schedule and under budget[cite: 3]. Shown here during pre-hoist staging, our crews inspect, organize, and pre-assemble galvanized sector frames, collar mounts, antenna pipes, and hybrid fiber/power trunk lines on the ground—ensuring fast, accurate installation and clean cable routing once aloft[cite: 3].</p>
+            <div class="service-media">
+                <img src="images/serv3.jpg" alt="Telecom Tower Sector Frame Assembly and Hybrid Cable Staging">
+            </div>
+            <div class="service-content">
+                <h3>Structural Mount Assembly, Modifications &amp; Line Staging</h3>
+                <p>Proper ground preparation and precision steel assembly are essential to keeping tower projects on schedule and under budget. Shown here during pre-hoist staging, our crews inspect, organize, and pre-assemble galvanized sector frames, collar mounts, antenna pipes, and hybrid fiber/power trunk lines on the ground—ensuring fast, accurate installation and clean cable routing once aloft.</p>
+            </div>
         </div>
 
-        <!-- Service 4: serv4.jpg -->
+        <!-- Service 4: Text Left / Photo Right (via :nth-child(even) flex-direction: row-reverse) -->
         <div class="service-item">
-            <img src="images/serv4.jpg" alt="Certified Tower Technicians Working Aloft on Monopole Cellular Antennas">
-            <h3>Tower-Top Antenna, Radio &amp; Line Installation</h3>
-            <p>Our NWSA-certified tower technicians execute complex tower-top installations, sector upgrades, and line replacements with uncompromising precision and safety[cite: 4]. Pictured here working aloft on a multi-carrier monopole array, our crews handle panel antennas, Remote Radio Units (RRUs), and weatherproofed jumper routing while maintaining 100% tie-off compliance under strict OSHA and ANSI standards[cite: 4].</p>
+            <div class="service-media">
+                <img src="images/serv4.jpg" alt="Certified Tower Technicians Working Aloft on Monopole Cellular Antennas">
+            </div>
+            <div class="service-content">
+                <h3>Tower-Top Antenna, Radio &amp; Line Installation</h3>
+                <p>Our NWSA-certified tower technicians execute complex tower-top installations, sector upgrades, and line replacements with uncompromising precision and safety. Pictured here working aloft on a multi-carrier monopole array, our crews handle panel antennas, Remote Radio Units (RRUs), and weatherproofed jumper routing while maintaining 100% tie-off compliance under strict OSHA and ANSI standards.</p>
+            </div>
         </div>
 
         <!-- Call to Action -->
