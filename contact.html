@@ -2,55 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact - Elevated Telecom Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Elevated Telecom Services</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; line-height: 1.6; }
         header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        header p { margin: 5px 0 0 0; }
         nav { background: #444; padding: 10px; text-align: center; }
         nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
         nav a:hover { text-decoration: underline; }
-        .container { max-width: 800px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        
-        /* Apply Button Styling */
-        .apply-btn {
-            display: inline-block;
-            background-color: #333;
-            color: white;
-            padding: 12px 25px;
-            margin-top: 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .apply-btn:hover {
-            background-color: #555;
+        h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 0; }
+
+        .form-frame {
+            width: 100%;
+            height: 850px;
+            border: none;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 15px; padding: 20px; }
+            nav a { display: inline-block; margin: 5px 10px; }
+            .form-frame { height: 950px; }
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Contact Us</h1>
+        <p>Reach Elevated Telecom Services for Project Inquiries &amp; Field Support</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+        <a href="apply.html">Apply</a>
     </nav>
     <div class="container">
-        <h2>Get In Touch</h2>
-        <p>If you have questions about our services or need to reach our management team, please use the contact information below.</p>
-        <p><strong>Email:</strong> info@elevatedtelecom.com</p>
-        <p><strong>Phone:</strong> (555) 123-4567</p>
+        <h2>Get in Touch</h2>
+        <p>Have a tower project, structural modification, maintenance window, or field inquiry? Fill out the form below and our team will follow up promptly.</p>
 
-        <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
-
-        <h3>Looking to Join Our Team?</h3>
-        <p>We are always looking for skilled tower technicians and crew members. Click below to view our employment application and submit your resume.</p>
-        
-        <!-- Linked Button to apply.html -->
-        <a href="apply.html" class="apply-btn">Apply With Us</a>
+        <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdUqhivS14vj5sVNHymMNoWznkhVDCa5Dr2WazTc4dexon6Vw/viewform?embedded=true">Loading…</iframe>
     </div>
+
+    <footer>
+        <p><strong>Procedures &amp; Safety Policies</strong></p>
+        <p>All field operations strictly adhere to OSHA, ANSI/TIA-322, and NATE safety standards with 100% fall-protection compliance.</p>
+        <p>&copy; 2026 Elevated Telecom Services. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

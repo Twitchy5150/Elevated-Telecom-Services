@@ -2,49 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employment Application - Elevated Telecom Services</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; line-height: 1.6; }
         header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        header p { margin: 5px 0 0 0; }
         nav { background: #444; padding: 10px; text-align: center; }
         nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
         nav a:hover { text-decoration: underline; }
-        
-        .container { 
-            max-width: 800px; 
-            margin: 30px auto; 
-            background: #fff; 
-            padding: 30px; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         h2 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 0; }
-        
-        /* Form Iframe Styling */
+
         .form-frame {
             width: 100%;
             height: 900px;
             border: none;
             margin-top: 20px;
         }
+
+        @media (max-width: 600px) {
+            .container { margin: 15px; padding: 20px; }
+            nav a { display: inline-block; margin: 5px 10px; }
+            .form-frame { height: 1000px; }
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Employment Application</h1>
+        <p>Join Elevated Telecom Services</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+        <a href="apply.html">Apply</a>
     </nav>
     <div class="container">
         <h2>Join Our Team</h2>
         <p>Please fill out the application form below and attach your resume. We review all submissions promptly.</p>
 
-        <!-- Embedded Google Form with viewform?embedded=true -->
         <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdUqhivS14vj5sVNHymMNoWznkhVDCa5Dr2WazTc4dexon6Vw/viewform?embedded=true">Loading…</iframe>
     </div>
+
+    <footer>
+        <p><strong>Procedures &amp; Safety Policies</strong></p>
+        <p>All field operations strictly adhere to OSHA, ANSI/TIA-322, and NATE safety standards with 100% fall-protection compliance.</p>
+        <p>&copy; 2026 Elevated Telecom Services. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
